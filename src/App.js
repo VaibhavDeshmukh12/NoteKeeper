@@ -1,24 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import Header from "./Components/Header";
+import Footer from "./Components/Footer";
+import CreateArea from "./Components/CreateArea";
+import Note from "./Components/Note";
 
 function App() {
+  const [item,setItems] = useState([])
+
+  const addNote = (note) =>{
+    setItems((prev)=>{
+      return [...prev,note];
+    })
+    
+  }
+
+  const handleClick = (id) =>{
+    setItems((prev)=>{
+      return prev.filter((item,index)=>{
+        return  index !== id;
+      })
+    })
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header />
+        <CreateArea addNote={addNote} />
+        <div className="notes">
+          {item.map((items,index)=>{
+            return <Note handleClick={handleClick} title={items.title} desc={items.content} key={index} id={index} />
+          })}
+        </div>
+      <Footer />
+    </>
   );
 }
 
