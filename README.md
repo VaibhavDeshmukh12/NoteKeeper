@@ -6,7 +6,6 @@ NoteKeeper is a web application built with React that serves as a clone of Googl
 
 - **Create Notes**: Easily create new notes with a title and content.
 - **Edit and Delete**: Edit and delete notes seamlessly to keep your information up to date.
-- **Color Coding**: Organize your notes by assigning different colors to them.
 - **Responsive Design**: Enjoy a responsive and user-friendly design that works well on various devices.
 
 ## Getting Started
@@ -20,11 +19,10 @@ Make sure you have Node.js and npm installed on your machine.
 - [Node.js](https://nodejs.org/)
 - [npm](https://www.npmjs.com/)
 
-### Installation
-
-1. Clone the repository:
+### Try it (Instructions)
 
 ```bash
+1. Clone the repository:
 git clone https://github.com/VaibhavDeshmukh12/NoteKeeper.git
 
 2. Change into the project directory:
@@ -48,3 +46,4 @@ If you'd like to contribute to this project, please follow these guidelines:
     3. Commit your changes: git commit -m 'Add a new feature'.
     4. Push to the branch: git push origin feature/new-feature.
     5. Submit a pull request.
+```
